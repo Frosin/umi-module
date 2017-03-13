@@ -3,8 +3,8 @@
         'icml' => 'onCronGenerateICML',
         'history' => 'onCronSyncHistory',
     );
-    
-    if (isset($_SERVER['argv'][2]) || isset($eventHandlers[$_SERVER['argv'][2]])) {
+
+    if (isset($_SERVER['argv']) && (isset($_SERVER['argv'][2]) || isset($eventHandlers[$_SERVER['argv'][2]]))) {
         new umiEventListener('cron', 'RetailCRM', $eventHandlers[$_SERVER['argv'][2]]);
     }
     
