@@ -212,7 +212,7 @@ abstract class __RetailCRM_adm extends baseModuleAdmin
                     }
                 }
             }
-
+            $config->save();
             $this->chooseRedirect();
         }
 
